@@ -28,7 +28,7 @@ program
   .parse(process.argv);
 ```
 
-and the various user input cases like this:
+and defines the various user input cases like this:
 ```
 var performAction = require('./actions/' + program.actionToPerform)
 
