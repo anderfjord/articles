@@ -374,5 +374,5 @@ This tutorial has attempted to demonstrate both a custom CLI microframework and 
 
 Whatever the case may be for your project, be advised that if you are wanting to crawl on any level of scale, then you will not want to expand on the architecture demonstrated in this tutorial. It is purely for instructional purposes, and does not represent scalable artchitecture. Nonetheless, it does provide some nuts-and-bolts crawling examples that could be repurposed for use in a scalable, job server environment.
 
-Lastly, be cognizant and conscientious when you crawl. Get permission when you can, be polite to the maximum extent that you can, and take serious care not to accidentally (or intentionally) [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) anybody. If you suspect that you're generating a lot of automated traffic, then you probably are, and you should likely re-evaluate your goals, implementation, or level of permission.
+Lastly, be cognizant and conscientious when you crawl. Get permission when you can, be polite to the maximum extent that you can, and never [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) anybody, whether accidentally or intentionally. If you suspect that you're generating a lot of automated traffic, then you probably are, and you should likely re-evaluate your goals, implementation, or level of permission.
 
