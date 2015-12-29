@@ -370,7 +370,7 @@ By extending the logic provided herein, you could extract virtually any type of 
 
 ### Conclusion
 
-This tutorial has attempted to demonstrate both a custom CLI microframework and some basic logic for crawling in Node.js, using Horseman to facilitate interactions with PhantomJS. While the use of a CLI framework would likely benefit most projects, the use of crawling is commonly limited to specific use cases. These might include various areas of QA testing, such as functional, user interface, and end-to-end testing, or relate to security objectives, such as defacement detection or reconnaissance.
+This tutorial has attempted to demonstrate both a custom CLI microframework and some basic logic for crawling in Node.js, using Horseman to facilitate interactions with PhantomJS. While using a CLI framework would likely benefit most projects, the use of crawling is commonly limited to specific use cases. These might include various areas of QA testing, such as functional, user interface, and end-to-end testing, or relate to security objectives, such as defacement detection or reconnaissance.
 
 Whatever the case may be for your project, be advised that if you are wanting to crawl on any level of scale, then you will not want to expand on the architecture demonstrated in this tutorial. It is purely for instructional purposes, and does not represent scalable artchitecture. Nonetheless, it does provide some nuts-and-bolts crawling examples that could be repurposed for use in a scalable, job server environment.
 
