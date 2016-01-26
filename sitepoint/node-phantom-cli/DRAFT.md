@@ -359,20 +359,18 @@ One last thing should be noted in this section, which was alluded to earlier. An
 ```
   phantomInstance
     .open(url)
-    .injectJs('lib/recon.js')
+    .injectJs('scripts/CustomLogic.js')
     .evaluate(function() {
-      var x = Recon.getX(); // Assumes variable 'Recon' was loaded by lib/recon.js
-      console.log('Doing stuff in browser environment with Recon.x: ', x);
+      var x = CustomLogic.getX(); // Assumes variable 'CustomLogic' was loaded by scripts/custom_logic.js
+      console.log('Retrieved x using CustomLogic: ', x);
     })
 ```
 
-By extending the logic provided herein, you could extract virtually any type of data from any URL.
+By extending the logic above, you could perform virtually any action on any website.
 
 ### Conclusion
 
-This tutorial has attempted to demonstrate both a custom CLI microframework and some basic logic for crawling in Node.js, using Horseman to facilitate interactions with PhantomJS. While using a CLI framework would likely benefit most projects, the use of crawling is commonly limited to specific use cases. These might include various areas of QA testing, such as functional, user interface, and end-to-end testing, or relate to security objectives, such as defacement detection or reconnaissance.
+This tutorial has attempted to demonstrate both a custom CLI microframework and some basic logic for crawling in Node.js. While using a CLI framework would likely benefit many projects, the use of crawling is typically limited to very specific problem domains. One common area is Quality Assurance, where crawling can be used for functional and user interface testing. Another common area is security, where, for example, you might want to crawl your website periodically to detect if it's been defaced or otherwise compromised.
 
-Whatever the case may be for your project, be advised that if you are wanting to crawl on any level of scale, then you will not want to expand on the architecture demonstrated in this tutorial. It is purely for instructional purposes, and does not represent scalable artchitecture. Nonetheless, it does provide some nuts-and-bolts crawling examples that could be repurposed for use in a scalable, job server environment.
-
-Lastly, be cognizant and conscientious when you crawl. Get permission when you can, be polite to the maximum extent that you can, and never [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) anybody, whether accidentally or intentionally. If you suspect that you're generating a lot of automated traffic, then you probably are, and you should likely re-evaluate your goals, implementation, or level of permission.
+Whatever the case may be for your project, make sure to be cognizant and conscientious when you crawl. Get permission when you can, be polite to the maximum extent that you can, and never [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) anybody, whether accidentally or intentionally. If you suspect that you're generating a lot of automated traffic, then you probably are, and you should likely re-evaluate your goals, implementation, or level of permission.
 
