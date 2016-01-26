@@ -370,7 +370,7 @@ By extending the logic above, you could perform virtually any action on any webs
 
 ### Conclusion
 
-This tutorial has attempted to demonstrate both a custom CLI microframework and some basic logic for crawling in Node.js. While using a CLI framework would likely benefit many projects, the use of crawling is typically limited to very specific problem domains. One common area is Quality Assurance, where crawling can be used for functional and user interface testing. Another common area is security, where, for example, you might want to crawl your website periodically to detect if it's been defaced or otherwise compromised.
+This tutorial has attempted to demonstrate both a custom CLI microframework and some basic logic for crawling in Node.js, using the Horseman package to leverage PhantomJS. While using a CLI framework would likely benefit many projects, the use of crawling is typically limited to very specific problem domains. One common area is in quality assurance (QA), where crawling can be used for functional and user interface testing. Another is security, where, for example, you might want to crawl your website periodically to detect if it has been defaced or otherwise compromised.
 
 Whatever the case may be for your project, make sure to be cognizant and conscientious when you crawl. Get permission when you can, be polite to the maximum extent that you can, and never [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) anybody, whether accidentally or intentionally. If you suspect that you're generating a lot of automated traffic, then you probably are, and you should likely re-evaluate your goals, implementation, or level of permission.
 
