@@ -1,5 +1,5 @@
 
-# Crawling on command using Node.js
+# Crawling on Command Using Node.js
 
 It is quite common during the course of a project to find yourself needing to write custom scripts for performing a variety of actions. Such one-off scripts, which are typically triggered via the command-line ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)), can be used for virtually any type of task. Having written many such scripts over the years, I have grown to appreciate the value of taking a small amount of time upfront to put in place a custom CLI [microframework](https://en.wikipedia.org/wiki/Microframework) to facilitate this process. Fortunately, [Node.js](https://nodejs.org/) and its extensive package ecosystem, [NPM](https://www.npmjs.com/), make it easy to do just that. Whether parsing a text file or running an [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load), having a convention in place makes it easy to add new functionality in an efficient and structured way.
 
@@ -8,7 +8,7 @@ While not typically associated with the command-line, the crawling of websites i
 The source code for this tutorial can be found on [GitHub](https://github.com/wreckloose/node-phantom-cli). In order to run the examples, you will need to have both Node.js and PhantomJS installed, which is outside the scope of this article.
 
 
-### Setting up a basic command-line framework
+### Setting up a Basic Command-line Framework
 
 At the heart of any CLI framework is the concept of converting a command, which typically includes one or more optional or required arguments, into a concrete action. Two NPM packages that are quite helpful in this regard are [commander](https://www.npmjs.com/package/commander) and [prompt](https://www.npmjs.com/package/prompt). 
 
@@ -84,7 +84,7 @@ module.exports = function (phantomInstance, url) {
 
 As you can see, the module expects to be supplied with an instance of a PhantomJS object and a url. We will get into the specifics of defining a PhantomJS instance momentarily, but for now, it's enough to see that we've laid the groundwork for triggering a particular action. Now that the convention is in place, we can more efficiently add new actions, and do so in a sane manner.
 
-### Crawling with PhantomJS using Horseman
+### Crawling with PhantomJS Using Horseman
 
 [Horseman](https://github.com/johntitus/node-horseman) is a Node.js package that provides a powerful interface for creating and interacting with PhantomJS processes. A comprehensive explanation of Horseman and its features would warrant its own article, but suffice it to say that it allows you to easily simulate just about any behavior that a human user might exhibit, including mouse and keyboard interactions, as well as cookie handling. Horseman provides a wide range of configuration options, including things like automatically injecting [jQuery](https://jquery.com/) and ignoring SSL certificate warnings.
 
@@ -105,7 +105,7 @@ Now when we run our command, the Horseman instance and input url get passed to t
 
 
 
-### Chaining Horseman methods for complex interactions
+### Chaining Horseman Methods for Complex Interactions
 
 So far we've looked at a very simple usage of Horseman, but the package can do much more. We can chain Horseman's methods to perform a sequence of actions, such as triggering mouse clicks, entering text, and submitting forms. 
 
@@ -259,7 +259,7 @@ As with any Horseman crawl sequence, it is crucial that we close the Horseman in
 If we fail to close the Horseman instance, then we can end up with orphaned PhantomJS processes persisting on our machine.
 
 
-### Crawling to gather data
+### Crawling to Gather Data
 
 At this point, we have assembled a static sequence of actions to accomplish a particular goal: programmatically creating a new repository on GitHub. In order to do this, we have chained a series of discrete Horseman methods together. This approach can be useful for specific structural and behavioral patterns that are known beforehand, however, you may find that you have to implement more flexible scripting, when the path of execution has the potential to vary widely based on context-specific logic. Perhaps the site you're crawling has complicated logic forks, with many possible outcomes. Or perhaps you're just wanting to extract data from the DOM, which uses the same technique.
 
